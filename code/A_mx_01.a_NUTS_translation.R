@@ -2,7 +2,7 @@
 setwd("data_input/")
 dat_names <- dir() 
 fdz <- 
-  dat_names[substr(dat_names, 1, 8) == "external"][1:8] %>% 
+  dat_names[substr(dat_names, 1, 8) == "external"][1:6] %>% 
   map_df(~read_delim(.)) %>% 
   select(ags2012, ags2013,
          ags2014, ags2015, ags2016, ags2017, 
