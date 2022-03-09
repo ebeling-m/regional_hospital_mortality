@@ -13,11 +13,11 @@ d_cod <-
   mutate(sex = ifelse(Geschl == 1, "m", "w"),
          D = as.numeric(D)) %>%
   rowwise() %>% 
-  mutate(D = ifelse(is.na(D), 
+  mutate(D_mis = ifelse(is.na(D), 1, 0),
+         D = ifelse(is.na(D), 
                     sample(x = c(0,1,2), size = 1), 
                     D)) %>% 
-  select(Age, sex, Region, dia, D)
-unique(d_cod$Region)
+  select(Age, sex, Region, dia, D, D_mis)
 
 # Stadt Eisenach 16056 included in Wartburgkreis 	16063
 
@@ -35,7 +35,7 @@ pop1 <-
   mutate(Year = as.numeric(substr(Year,7, 10)))
 
 ageRecode <- cbind(unique(pop1$Age),
-                   c(seq(0, 95, by = 5), NA))
+                   c(seq(0, 90, by = 5), 90, NA))
 
 pop1 <- 
   pop1 %>% 
@@ -61,7 +61,7 @@ pop1 <-
             Women = sum(Women))
 
 # Calculate average population for years 2012 to 2018
-# x <- pop_mean %>% filter(Age1 == 65 & Sex == "Men", ags2017kreis == 1001)
+x <- pop_mean %>% filter(Age1 == 65 & Sex == "Men", ags2017kreis == 1001)
 
 average_pop <- function(x){
   p <- x$P
