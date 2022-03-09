@@ -46,6 +46,5 @@ lifetable <- function(mx){
   Tx <- rev(cumsum(rev(Lx)))
   ex <- Tx/lx
   out <- ex[1]
-  # out <- data.frame(lx=lx, Lx=Lx, Tx=Tx, ex=ex)
   return(out)
 }
