@@ -1,0 +1,51 @@
+﻿AMI statistics. Based on county of residence, Entire Sweden, Age interval: 65-85+
+Indicator;Sex;Age;2012;2013;2014;2015;2016;2017;2018
+Case fatality of AMI. Deaths within 28 days;Men;65­69;19.1;19.5;19.1;16.7;18;17.2;15.6
+Case fatality of AMI. Deaths within 28 days;Men;70­74;24.1;22.6;21.4;21.5;19.5;19.1;20.8
+Case fatality of AMI. Deaths within 28 days;Men;75­79;28.8;27.4;27.1;24.1;25.1;22.5;24.3
+Case fatality of AMI. Deaths within 28 days;Men;80­84;33.1;33.3;32.2;30.8;30.5;29.4;30.2
+Case fatality of AMI. Deaths within 28 days;Men;85­;43.3;43.8;42.8;42.1;40.8;40.9;41.2
+Case fatality of AMI. Deaths within 28 days;Men;65­85+;30.8;30.3;29.2;27.7;27.2;26.3;26.8
+Case fatality of AMI. Deaths within 28 days;Women;65­69;18;19.9;17.9;18.5;17;14.5;16.3
+Case fatality of AMI. Deaths within 28 days;Women;70­74;20.8;18.8;20.8;18.3;20.7;18.6;18.6
+Case fatality of AMI. Deaths within 28 days;Women;75­79;24.5;25.2;23;22.1;23;23.5;23.7
+Case fatality of AMI. Deaths within 28 days;Women;80­84;30.5;30.6;29;27.4;28.5;28;27.5
+Case fatality of AMI. Deaths within 28 days;Women;85­;42.4;42.4;41.1;41.3;40.3;38.7;39.9
+Case fatality of AMI. Deaths within 28 days;Women;65­85+;32.6;32.7;31.2;30.3;30.3;28.6;29
+Case fatality of AMI. Deaths within 365 days;Men;65­69;23;23.9;23.7;21.3;22.4;20.8;19.6
+Case fatality of AMI. Deaths within 365 days;Men;70­74;30;28.3;27.1;27.7;24.8;25.5;25.6
+Case fatality of AMI. Deaths within 365 days;Men;75­79;37.2;35.7;35.9;31.9;33.7;31.4;32.3
+Case fatality of AMI. Deaths within 365 days;Men;80­84;45.2;45.1;43.7;43.7;42.9;41.7;41.8
+Case fatality of AMI. Deaths within 365 days;Men;85­;62.9;61.1;62.3;60.6;58.7;59.8;58.8
+Case fatality of AMI. Deaths within 365 days;Men;65­85+;41.6;40.3;39.6;38.1;37.1;36.7;36.2
+Case fatality of AMI. Deaths within 365 days;Women;65­69;24;25.2;22.6;23.2;23.4;19.1;20.3
+Case fatality of AMI. Deaths within 365 days;Women;70­74;27.5;27;27.6;25.2;27.4;25.7;25.1
+Case fatality of AMI. Deaths within 365 days;Women;75­79;35.1;33.9;31.6;30.4;31.1;31.8;30
+Case fatality of AMI. Deaths within 365 days;Women;80­84;44.4;41.9;42.2;39.7;39.9;39.2;37.8
+Case fatality of AMI. Deaths within 365 days;Women;85­;59;59.9;58.8;58;58.5;56.9;55.4
+Case fatality of AMI. Deaths within 365 days;Women;65­85+;45.7;45.5;43.9;42.3;42.8;40.7;39.4
+Incidence rate of AMI per 100 000 persons;Men;65­69;927;841;853;821;822;777;761
+Incidence rate of AMI per 100 000 persons;Men;70­74;1,256;1,187;1,131;1,080;1,015;993;938
+Incidence rate of AMI per 100 000 persons;Men;75­79;1,746;1,647;1,547;1,464;1,426;1,393;1,298
+Incidence rate of AMI per 100 000 persons;Men;80­84;2,568;2,310;2,278;2,045;2,008;1,877;1,803
+Incidence rate of AMI per 100 000 persons;Men;85­;4,431;3,974;3,622;3,514;3,244;3,167;2,874
+Incidence rate of AMI per 100 000 persons;Men;65­85+;1,716;1,564;1,495;1,418;1,366;1,322;1,252
+Incidence rate of AMI per 100 000 persons;Women;65­69;376;318;344;324;303;312;324
+Incidence rate of AMI per 100 000 persons;Women;70­74;601;562;533;513;478;475;475
+Incidence rate of AMI per 100 000 persons;Women;75­79;946;891;807;804;767;701;701
+Incidence rate of AMI per 100 000 persons;Women;80­84;1,602;1,415;1,323;1,303;1,195;1,128;1,036
+Incidence rate of AMI per 100 000 persons;Women;85­;3,005;2,773;2,541;2,386;2,186;1,978;1,944
+Incidence rate of AMI per 100 000 persons;Women;65­85+;1,147;1,034;962;918;849;796;781
+Mortality rate in AMI as underlying cause of death per 100 000 persons;Men;65­69;141;133;126;105;112;110;92
+Mortality rate in AMI as underlying cause of death per 100 000 persons;Men;70­74;241;201;186;193;149;145;148
+Mortality rate in AMI as underlying cause of death per 100 000 persons;Men;75­79;375;340;315;259;274;230;240
+Mortality rate in AMI as underlying cause of death per 100 000 persons;Men;80­84;644;582;541;453;449;405;383
+Mortality rate in AMI as underlying cause of death per 100 000 persons;Men;85­;1,449;1,278;1,122;1,080;965;938;859
+Mortality rate in AMI as underlying cause of death per 100 000 persons;Men;65­85+;404;357;324;294;276;259;248
+Mortality rate in AMI as underlying cause of death per 100 000 persons;Women;65­69;55;47;49;48;41;33;41
+Mortality rate in AMI as underlying cause of death per 100 000 persons;Women;70­74;94;79;82;68;75;64;64
+Mortality rate in AMI as underlying cause of death per 100 000 persons;Women;75­79;165;168;137;128;131;116;116
+Mortality rate in AMI as underlying cause of death per 100 000 persons;Women;80­84;357;313;275;272;243;231;205
+Mortality rate in AMI as underlying cause of death per 100 000 persons;Women;85­;980;904;785;746;671;581;571
+Mortality rate in AMI as underlying cause of death per 100 000 persons;Women;65­85+;283;255;224;210;193;169;165
+The Health and Welfare Statistical Database 12/01/2023

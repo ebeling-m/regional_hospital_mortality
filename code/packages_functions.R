@@ -31,7 +31,6 @@ mapvalues <- function (x, from, to, warn_missing = TRUE)
 }
 
 # Life table
-
 lifetable <- function(mx){
   n <- rep(5, length(mx))
   ax <- rep(2.5, length(mx))
@@ -48,3 +47,4 @@ lifetable <- function(mx){
   out <- ex[1]
   return(out)
 }
+
