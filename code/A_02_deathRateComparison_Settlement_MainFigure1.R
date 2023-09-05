@@ -111,8 +111,8 @@ basic_bar_wom <- function(){
            col = "lightgray")
   axis(1, at = seq(-0.4, 0.4, by = 0.1), 
        labels = c("40%", "30%", "20%", "10%", "0%", "10%", "20%", "30%", "40%"), 
-       lwd = 3, pos = -0.05, cex.axis = 1.5)
-  axis(1, at = seq(-0.35, 0.35, by = 0.5), 
+       lwd = 3, pos = -0.05, cex.axis = 1.3)
+  axis(1, at = seq(-0.35, 0.35, by = 0.1), 
        labels = FALSE, 
        lwd = 1, pos = -0.05)
   par(las = 1)
@@ -135,7 +135,7 @@ basic_bar <- function(){
            col = "lightgray")
   axis(1, at = seq(-0.4, 0.4, by = 0.1), 
        labels = c("40%", "30%", "20%", "10%", "0%", "10%", "20%", "30%", "40%"), 
-       lwd = 3, pos = -0.05, cex.axis = 1.5)
+       lwd = 3, pos = -0.05, cex.axis = 1.3)
   axis(1, at = seq(-0.35, 0.35, by = 0.1), 
        labels = FALSE, 
        lwd = 1, pos = -0.05)
@@ -145,49 +145,51 @@ basic_bar <- function(){
                   "80-84", "85-89", "90+"), 
        lwd = 0, cex.axis = 1.5, pos = -0.39)
   
-  mtext("Relative mortality difference", 1,  line = 3.5, cex = 1.4)
+  mtext("Relative difference in median death rate\nwith 95% CI", 1,  line = 4.5, cex = 1.4)
   mtext("Urban excess", 1, line = -1, cex = 1.3, adj = 0.01)
   mtext("Rural excess", 1, line = -1, cex = 1.3, adj = 0.99)
 }
 
 # dev.off()
 pdf("figures/bar_plot_mortDiff_settlement.pdf", family = "Times", 
-    width = 21, height = 14, pointsize = 16)
-layout(rbind(c(1:3), c(4:6)))
+    width = 14, height = 14, pointsize = 16)
+# layout(rbind(c(1:3), c(4:6)))
+layout(rbind(c(1:2), c(3:4)))
 ages <- seq(65, 90, by = 5)
 y_cord <- cbind(0:5, 1:6)
 rownames(y_cord) <- ages
 
 # Women Total Death Rates
 par(mar = c(4, 4, 5, 2) + 0.1)
-basic_bar_wom()
-mtext("Women", 3, line = -1, adj = 0.01, cex = 1.3)
-mtext("All-cause deaths", 3, line = 1, cex = 1.5)
-par(xpd = TRUE)
-wom <- median_mx %>% filter(sex == "w")
-for(i in ages){
-  plotDat <- wom %>% 
-    filter(Age == i) %>% 
-    rename(med = di_t_5, 
-           low = di_t_25, 
-           up = di_t_97)
-  yy <- c(rep(y_cord[paste(i),1],2),
-          rep(y_cord[paste(i),2],2))
-  xx <- c(0, rep(plotDat$med,2), 0)
-  polygon(x=xx, y=yy, col ='#bdbdbd', 
-          border = "white")
-  lines(x=c(plotDat$low, plotDat$up), 
-        y= rep(y_cord[paste(i),1]+0.5,2), 
-        col = '#636363', pch = 16, cex = 1.4, 
-        typ = "p")
-  lines(x=c(plotDat$low, plotDat$up), 
-        y= rep(y_cord[paste(i),1]+0.5,2), 
-        col = '#636363', lwd = 2)
-}
+# basic_bar_wom()
+# mtext("Women", 3, line = -1, adj = 0.01, cex = 1.3)
+# mtext("All-cause deaths", 3, line = 1, cex = 1.5)
+# par(xpd = TRUE)
+# wom <- median_mx %>% filter(sex == "w")
+# for(i in ages){
+#   plotDat <- wom %>% 
+#     filter(Age == i) %>% 
+#     rename(med = di_t_5, 
+#            low = di_t_25, 
+#            up = di_t_97)
+#   yy <- c(rep(y_cord[paste(i),1],2),
+#           rep(y_cord[paste(i),2],2))
+#   xx <- c(0, rep(plotDat$med,2), 0)
+#   polygon(x=xx, y=yy, col ='#bdbdbd', 
+#           border = "white")
+#   lines(x=c(plotDat$low, plotDat$up), 
+#         y= rep(y_cord[paste(i),1]+0.5,2), 
+#         col = '#636363', pch = 16, cex = 1.4, 
+#         typ = "p")
+#   lines(x=c(plotDat$low, plotDat$up), 
+#         y= rep(y_cord[paste(i),1]+0.5,2), 
+#         col = '#636363', lwd = 2)
+# }
 
 # Women CVD Death Rates
 basic_bar_wom()
-mtext("CVD deaths", 3, line = 1, cex = 1.5)
+mtext("Women", 3, line = -1, adj = 0.01, cex = 1.3)
+mtext("CVD mortality", 3, line = 1, cex = 1.5)
 par(xpd = TRUE)
 wom <- median_mx %>% filter(sex == "w")
 for(i in ages){
@@ -212,7 +214,7 @@ for(i in ages){
 
 # Women MI Death Rates
 basic_bar_wom()
-mtext("MI-related deaths", 3, line = 1, cex = 1.5)
+mtext("MI-related mortality", 3, line = 1, cex = 1.5)
 par(xpd = TRUE)
 wom <- median_mx %>% filter(sex == "w")
 for(i in ages){
@@ -262,32 +264,32 @@ for(i in ages){
 
 # Men
 par(mar = c(7, 4, 2, 2) + 0.1)
-basic_bar()
-mtext("Men", 3, line = -1, adj = 0.01, cex = 1.3)
-# mtext("All-cause deaths", 3, line = 1, cex = 1.5)
-par(xpd = TRUE)
-wom <- median_mx %>% filter(sex == "m")
-for(i in ages){
-  plotDat <- wom %>% 
-    filter(Age == i) %>% 
-    rename(med = di_t_5, 
-           low = di_t_25, 
-           up = di_t_97)
-  yy <- c(rep(y_cord[paste(i),1],2),
-          rep(y_cord[paste(i),2],2))
-  xx <- c(0, rep(plotDat$med,2), 0)
-  polygon(x=xx, y=yy, col ='#bdbdbd', 
-          border = "white")
-  lines(x=c(plotDat$low, plotDat$up), 
-        y= rep(y_cord[paste(i),1]+0.5,2), 
-        col = '#636363', pch = 16, cex = 1.4, 
-        typ = "p")
-  lines(x=c(plotDat$low, plotDat$up), 
-        y= rep(y_cord[paste(i),1]+0.5,2), 
-        col = '#636363', lwd = 2)
-}
+# basic_bar()
+# mtext("Men", 3, line = -1, adj = 0.01, cex = 1.3)
+# # mtext("All-cause deaths", 3, line = 1, cex = 1.5)
+# par(xpd = TRUE)
+# wom <- median_mx %>% filter(sex == "m")
+# for(i in ages){
+#   plotDat <- wom %>% 
+#     filter(Age == i) %>% 
+#     rename(med = di_t_5, 
+#            low = di_t_25, 
+#            up = di_t_97)
+#   yy <- c(rep(y_cord[paste(i),1],2),
+#           rep(y_cord[paste(i),2],2))
+#   xx <- c(0, rep(plotDat$med,2), 0)
+#   polygon(x=xx, y=yy, col ='#bdbdbd', 
+#           border = "white")
+#   lines(x=c(plotDat$low, plotDat$up), 
+#         y= rep(y_cord[paste(i),1]+0.5,2), 
+#         col = '#636363', pch = 16, cex = 1.4, 
+#         typ = "p")
+#   lines(x=c(plotDat$low, plotDat$up), 
+#         y= rep(y_cord[paste(i),1]+0.5,2), 
+#         col = '#636363', lwd = 2)
+# }
 
-# Women CVD Death Rates
+# CVD Death Rates
 basic_bar()
 # mtext("CVD deaths (I00-I99)", 3, line = 1, cex = 1.5)
 par(xpd = TRUE)
@@ -311,6 +313,7 @@ for(i in ages){
         y= rep(y_cord[paste(i),1]+0.5,2), 
         col = '#636363', lwd = 2)
 }
+mtext("Men", 3, line = -1, adj = 0.01, cex = 1.3)
 
 # Women MI Death Rates
 basic_bar()
