@@ -98,7 +98,7 @@ comp_MI <-
 
 save(comp_MI, file = "data_inter/median_rates_in_out_hospital.RData")
 
-pdf("figures/in_out_hospital_eventRates.pdf", family = "Times", 
+pdf("figures/in_out_hospital_eventRates_settlement.pdf", family = "Times", 
     width = 14, pointsize = 15)
 layout(cbind(1,2))
 par(mar = c(4, 3.5, 2, 1) + 0.1, xpd = TRUE)

@@ -57,7 +57,7 @@ segments(x0=0:6, y0=0,x1=0:6, y1=0.04,
 segments(x0=0, y0=yy,x1=6, y1=yy, 
          col = "lightgray")
 par(las = 0)
-mtext("Events per 10000 PY", 2, cex = 1.3, line = 2.8)
+mtext("Cases per 10000 PY", 2, cex = 1.3, line = 2.8)
 
 # mtext("Age group", 1, cex = 1.3, line = 3)
 axis(1, at = seq(0.5, 5.5, by = 1), 
@@ -86,7 +86,7 @@ lines(x=seq(0.5, 5.5, by=1), y=urb$inc_5, typ = "p",
 lines(x=seq(0.5, 5.5, by=1), y=urb$inc_5, typ = "l", 
       lwd = 3, col = '#d8b365', lty = 2)
 mtext("Women", 3, line = -1.5, cex = 1.4, adj = 0.01)
-mtext("MI events", 3, line = 1, cex = 1.5)
+mtext("MI incidence", 3, line = 1, cex = 1.5)
 legend("topright", legend = c("Rural median with IQR", 
                              "Urban median with IQR"), 
        col = c("#5ab4ac", "#d8b365"), pch = 15, cex =1.3, 
@@ -108,8 +108,8 @@ segments(x0=0, y0=yy,x1=6, y1=yy,
          col = "lightgray")
 
 par(las = 0)
-mtext("Proportion on MI events", 2, cex = 1.3, line = 3)
-mtext("MI-related deaths", 3, line = 1, cex = 1.5)
+mtext("Proportion on MI cases", 2, cex = 1.3, line = 3)
+mtext("Case fatality", 3, line = 1, cex = 1.5)
 # mtext("Age group", 1, cex = 1.3, line = 3)
 axis(1, at = seq(0.5, 5.5, by = 1), 
      labels = c("65-69", "70-74", "75-79", "80-84",
